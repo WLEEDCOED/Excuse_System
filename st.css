@@ -1,0 +1,135 @@
+/* Basic styling and existing styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dff7ef;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e5fcf2;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #009966;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #009966;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.login-signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+}
+
+.login-box, .signup-box {
+    background-color: #00cc99;
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+    width: 300px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-box {
+    display: none;
+}
+
+.login-box h2, .signup-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-box label, .signup-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.login-box input, .signup-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-box button, .signup-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-box button:hover, .signup-box button:hover {
+    background-color: #333;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.toggle-form {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}
+
+.toggle-form a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-image {
+    margin-left: 50px;
+}
+
+.login-image img {
+    width: 200px;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
