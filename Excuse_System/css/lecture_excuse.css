@@ -1,0 +1,248 @@
+
+       
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #eceff1;
+    background-image: url('Image/BG-login.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    direction: rtl;
+    color: #333;
+}
+
+/* تنسيق الهيدر */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(42, 157, 143, 0.9);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.logout-btn {
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #d1495b;
+}
+
+/* تنسيق محتوى الصفحة */
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; 
+    padding-bottom: 20px;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* أيقونة الإغلاق */
+.close-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* أيقونة الطالب */
+.form-container .student-icon {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* العنوان */
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* حقول الإدخال */
+.form-container select,
+.form-container input[type="date"],
+.form-container input[type="text"],
+.form-container textarea,
+.form-container input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-container select:hover,
+.form-container input[type="date"]:hover,
+.form-container input[type="text"]:hover,
+.form-container textarea:hover,
+.form-container input[type="file"]:hover,
+.form-container select:focus,
+.form-container input[type="date"]:focus,
+.form-container input[type="text"]:focus,
+.form-container textarea:focus,
+.form-container input[type="file"]:focus {
+    border-color: #4CAF50;
+    background-color: #f1f8ff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* زر الإرسال */
+.form-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2a9d8f;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.form-container button:hover {
+    background-color: #21867a;
+    transform: translateY(-2px);
+}
+
+/* رسالة النجاح والخطأ */
+.success-message, .error-message {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.success-message {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.error-message {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+/* الفوتر */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    color: #e9c46a;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffd166;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    .logout-btn {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .close-icon {
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    footer {
+        padding: 15px 20px;
+    }
+
+    footer a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
